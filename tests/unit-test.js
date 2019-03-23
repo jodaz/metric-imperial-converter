@@ -83,7 +83,7 @@ suite('Unit Tests', () => {
       let input = ['gal', 'l', 'mi', 'km', 'lbs', 'kg'];
       let expect = ['gallons', 'liters', 'miles', 'kilometers', 'pounds', 'kilograms'];
       input.forEach((ele, i) => {
-        assert.equal(convertHandler.getReturnUnit(ele), expect[i]);
+        assert.equal(convertHandler.spellOutUnit(ele), expect[i]);
       });
       done();
     });
