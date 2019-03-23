@@ -15,8 +15,8 @@ suite('Unit Tests', () => {
     });
     
     test('Decimal Input', (done) => {
-      let input = '32.3L';
-      assert.equal(convertHandler.getNum(input),32.3);
+      let input = '5.4L';
+      assert.equal(convertHandler.getNum(input),5.4);
       done();
     });
     
@@ -83,7 +83,7 @@ suite('Unit Tests', () => {
       let input = ['gal', 'l', 'mi', 'km', 'lbs', 'kg'];
       let expect = ['gallons', 'liters', 'miles', 'kilometers', 'pounds', 'kilograms'];
       input.forEach((ele, i) => {
-        assert.equal(convertHandler.getReturnUnit(ele), expect[i]);
+        assert.equal(convertHandler.spellOutUnit(ele), expect[i]);
       });
       done();
     });
@@ -94,14 +94,14 @@ suite('Unit Tests', () => {
     
     test('Gal to L', (done) => {
       let input = [5, 'gal'];
-      let expected = 18.9271;
+      let expected = 18.927;
       assert.approximately(convertHandler.convert(input[0],input[1]), expected, 0.1); 
       done();
     });
     
     test('L to Gal', (done) => {
       let input = [6, 'l'];
-      let expected = 1.3198;
+      let expected = 1.585;
       assert.approximately(convertHandler.convert(input[0], input[1]), expected, 0.1);
       done();
     });
