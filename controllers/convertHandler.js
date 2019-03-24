@@ -1,5 +1,5 @@
 const regexNum = /\d+(?:\.\d+)?(\/\d+)?/g;
-const regexUnit = /\D+/g;
+const regexUnit = /[a-zA-Z]+/g;
 
 // REFACTORING IDEA:
 // 'GAL': ['GALLONS', 'L']
