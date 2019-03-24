@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "test": "mocha --ui tdd tests/unit-test.js"
+    "test": "mocha --ui tdd tests/unit-test.js",
+    "ftest": "mocha --ui tdd tests/functional-test.js",
+    "vtest": "mocha --ui tdd tests/validator-unit-test.js"
   },
   "keywords": [],
   "author": "",
