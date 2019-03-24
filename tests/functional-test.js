@@ -24,6 +24,20 @@ suite('Functional Tests', () => {
             done();
           });
       });
+
+      test('Convert 1.6L (valid input)', (done) => {
+        chai.request(server)
+          .get('/api/convert')
+          .query({input: '1.6L'})
+          .end( (err, res) => {
+            assert.equal(res.status, 200);
+            assert.equal(res.body.initNum, 1.6);
+            assert.equal(res.body.initUnit, 'L');
+            assert.approximately(res.body.returnNum, 0.42272, 0.1);
+            assert.equal(res.body.returnUnit, 'gal');
+            done();
+          });
+      });
       
       test('Convert 32g (invalid input unit)', (done) => {
         chai.request(server)
@@ -36,10 +50,10 @@ suite('Functional Tests', () => {
           });
       });
       
-      test('Convert 3/7.2/4kg (invalid value)', (done) => {
+      test('Convert 2/3/4Gal (invalid value)', (done) => {
         chai.request(server)
           .get('/api/convert')
-          .query({input: '3/7.2/4kg'})
+          .query({input: '2/3/4Gal'})
           .end( (err, res) => {
             assert.equal(res.status, 200);
             assert.equal(res.body.error, 'Invalid value');
