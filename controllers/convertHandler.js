@@ -50,7 +50,7 @@ module.exports = function convertHandler() {
 
   this.getReturnUnit = (input) => {
     // Return new unit only
-    let originalUnit = this.getUnit(input);
+    let originalUnit = this.getUnit(input).toLowerCase();
     let convertUnit = conversionMap[originalUnit];
 
     return convertUnit;
@@ -64,7 +64,7 @@ module.exports = function convertHandler() {
 
   this.convert = (value, unit) => {
     // Return numeric conversion of initial value
-    let newUnit = this.getUnit(unit);
+    let newUnit = this.getUnit(unit).toLowerCase();
     let newValue = convertFuncs[newUnit](value);
 
     return newValue;
