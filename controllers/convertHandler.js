@@ -27,8 +27,8 @@ const convertFuncs = {
   'gal':  (v) => { return v * 3.785; },
   'km':   (v) => { return v / 1.609; },
   'mi':   (v) => { return v * 1.609; },
-  'kg':   (v) => { return v * 2.205; },
-  'lbs':  (v) => { return v / 2.205; }
+  'kg':   (v) => { return v * 2.2045; },
+  'lbs':  (v) => { return v / 2.2045; }
 };
 
 module.exports = function convertHandler() {
@@ -36,6 +36,10 @@ module.exports = function convertHandler() {
     // Return numerical value only if the match
     // Is a single-element array.
     let value = input.match(regexNum);
+
+    // Return 1 if no value is matched
+    if (value === null) { return 1; }
+
     return value.length == 1 ? eval(value[0]) : 'Invalid value';
   }
 
