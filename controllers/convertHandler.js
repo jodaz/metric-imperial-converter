@@ -49,18 +49,21 @@ module.exports = function convertHandler() {
   }
 
   this.getReturnUnit = (input) => {
+    // Return new unit only
     let originalUnit = this.getUnit(input);
     let convertUnit = conversionMap[originalUnit];
 
     return convertUnit;
   }
 
-    this.spellOutUnit = (input) => {
-      let unit = this.getUnit(input).toLowerCase();
-      return units[unit];
-    }
+  this.spellOutUnit = (input) => {
+    // Returns spelled original unit only without conversion
+    let unit = this.getUnit(input).toLowerCase();
+    return units[unit];
+  }
 
   this.convert = (value, unit) => {
+    // Return numeric conversion of initial value
     let newUnit = this.getUnit(unit);
     let newValue = convertFuncs[newUnit](value);
 
