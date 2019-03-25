@@ -60,7 +60,12 @@ suite('Unit Tests', () => {
       let input = 'xls';
       assert.equal(convertHandler.getUnit(input), 'Invalid unit');
       done();
-    });  
+    });
+
+    test('No unit', (done) => {
+      assert.equal(convertHandler.getUnit(''), 'Invalid unit');
+      done();
+    });
     
   });
   

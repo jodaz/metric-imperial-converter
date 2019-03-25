@@ -45,7 +45,14 @@ module.exports = function convertHandler() {
 
   this.getUnit = (input) => {
     // Return units only
-    let unit = input.match(regexUnit)[0];
+    let unit = input.match(regexUnit);
+    
+    if (unit === null) { 
+      return 'Invalid unit';
+    } else {
+      unit = unit[0];
+    }
+
     let validUnits = Object.keys(units);
     let validUnit = validUnits.includes(unit.toLowerCase());
 

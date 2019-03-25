@@ -80,12 +80,22 @@ suite('Functional Tests', () => {
             assert.equal(res.status, 200);
             assert.equal(res.body.initNum, 1);
             assert.equal(res.body.initUnit, 'kg');
-            console.log(res.body.returnNum);  
             assert.approximately(res.body.returnNum, 2.2045, 0.1);
             assert.equal(res.body.returnUnit, 'lbs');
             done();
           });
       });
+
+      test('Convert 89 (no unit)', (done) => {
+        chai.request(server)
+          .get('/api/convert')
+          .query({input: '89'})
+          .end( (err, res) => {
+            assert.equal(res.status, 200);
+            assert.equal(res.body.error, 'Invalid unit');
+            done();
+          });
+      })
     
     });
 
