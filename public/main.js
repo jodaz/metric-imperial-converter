@@ -5,16 +5,18 @@ const inputField = document.getElementById('convertField');
 const div = document.getElementById("toggle-div");
 const result = document.getElementById("result");
 const jsonResult = document.getElementById("jsonResult");
+const buttonToggler = document.getElementById("toggler");
+const convertForm = document.getElementById("convertForm");
 
-function toggle() {
+buttonToggler.addEventListener('click', () => {
   if(div.style.display == 'block') {
       div.style.display = 'none';
   } else {
     div.style.display = 'block';
   }
-}
+});
 
-document.getElementById("convertForm").addEventListener('submit', (e) => {
+convertForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   let APIurl = window.location.href + "api/convert?input=";
