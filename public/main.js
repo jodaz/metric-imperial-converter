@@ -23,7 +23,13 @@ document.getElementById("convertForm").addEventListener('submit', (e) => {
 
   (async () => {
     const data = await ky.get(urlRequest).json();
-    result.textContent = data.string;
+
+    if (data.string) {
+      result.textContent = data.string;
+    } else {
+      result.textContent = '';
+    }
+
     jsonResult.textContent = JSON.stringify(data);
   })();
 });
