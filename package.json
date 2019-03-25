@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "start": "nodemon app.js",
     "test": "mocha --ui tdd tests/unit-test.js",
     "ftest": "mocha --ui tdd tests/functional-test.js",
     "vtest": "mocha --ui tdd tests/validator-unit-test.js"
@@ -13,7 +13,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "cors": "^2.8.5",
