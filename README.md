@@ -2,6 +2,10 @@
 
 Simple US metric converter app made for freeCodeCamp's Information Security And Quality Assurance Certification.
 
+## Demo
+
+For a working demo, check [this](https://metrical.glitch.me)
+
 ## Getting started
 
 ### Prerequisites
@@ -25,8 +29,14 @@ Start server
 ```
 npm run start
 ```
+## Testing
 
-**NOTE**: For testing purposes, set `NODE_ENV` to `test` without quotes, in a `.env` file.
+For testing purposes, set `NODE_ENV` to `test` without quotes, in a `.env` file.
+
+### Test files explanation
+* `functional-test.js` - Test the working api.
+* `unit-test.js` - Test controller
+* `validator-unit-test.js` - Test the validator used to check inputs.
 
 ## Built With
 * [Express.js](https://expressjs.com/) - The web frammework used
