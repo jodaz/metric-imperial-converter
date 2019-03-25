@@ -8,7 +8,7 @@ const helmet = require('helmet');
 
 const app = express();
 const routes = require('./routes/api');
-const port = 4000;
+const testRunner = require('./test-runner.js');
 
 require('dotenv').config();
 
@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
 });
 
 // Start server
+const port = process.env.PORT || 3000;
 app.listen(port, () => { 
   console.log(`Listening on port ${port}`);
 
@@ -31,9 +32,8 @@ app.listen(port, () => {
     console.log('Running tests...');
     setTimeout(() => {
       try {
-        runner.run();
-      } catch(e) {
-        let error = e;
+        testRunner.run();
+      } catch(error) {
         console.log('Tests are not valid:', error);
       }
     }, 1500);
