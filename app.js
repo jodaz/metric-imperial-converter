@@ -23,6 +23,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
+app.get('/*', (req, res) => {
+  res.status(404)
+    .type('text')
+    .send('Resource not found');
+});
+
 // Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => { 
