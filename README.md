@@ -4,7 +4,7 @@ Simple US metric converter app made for freeCodeCamp's Information Security And 
 
 ## Demo
 
-For a working demo, check [this](https://metrical.glitch.me)
+For a working demo, check [this](https://jesuodz-metric-imperial-converter.glitch.me/)
 
 ## Getting started
 
