@@ -1,16 +1,13 @@
 {
   "name": "metric-imperial-converter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Metric-Imperial converter app made for freeCodeCamp",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "mocha --ui tdd tests/unit-test.js",
-    "ftest": "mocha --ui tdd tests/functional-test.js",
-    "vtest": "mocha --ui tdd tests/validator-unit-test.js"
+    "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Jesús Ordosgoitty <jesuodz@gmail.com> (https://jesuodz.github.io)",
+  "homepage": "https://github.com/jesuodz/metric-imperial-converter#readme",
   "license": "MIT",
   "dependencies": {
     "chai": "^4.2.0",
@@ -21,6 +18,11 @@
     "mocha": "^6.0.2"
   },
   "devDependencies": {
+    "dotenv": "^7.0.0",
     "nodemon": "^1.18.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jesuodz/metric-imperial-converter.git"
   }
 }
