@@ -26,6 +26,8 @@ Start server
 npm run start
 ```
 
+**NOTE**: For testing purposes, set `NODE_ENV` to `test` without quotes, in a `.env` file.
+
 ## Built With
 * [Express.js](https://expressjs.com/) - The web frammework used
 * [ky](https://github.com/sindresorhus/ky) - Elegant HTTP client used for making requests
