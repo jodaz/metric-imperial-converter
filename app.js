@@ -10,6 +10,8 @@ const app = express();
 const routes = require('./routes/api');
 const port = 4000;
 
+require('dotenv').config();
+
 app.use(cors());
 app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
@@ -22,5 +24,20 @@ app.get('/', (req, res) => {
 });
 
 // Start server
-app.listen(port, () => { console.log(`Listening on port ${port}`) });
+app.listen(port, () => { 
+  console.log(`Listening on port ${port}`);
+
+  if (process.env.NODE_ENV == 'test') {
+    console.log('Running tests...');
+    setTimeout(() => {
+      try {
+        runner.run();
+      } catch(e) {
+        let error = e;
+        console.log('Tests are not valid:', error);
+      }
+    }, 1500);
+  }
+});
+
 module.exports = app;
