@@ -1,5 +1,5 @@
 'use strict';
-import ky from '/ky.js';
+import ky from './libs/js/ky.js';
 
 const inputField = document.getElementById('convertField');
 const div = document.getElementById("toggle-div");
