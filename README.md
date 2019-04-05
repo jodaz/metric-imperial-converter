@@ -49,7 +49,7 @@ For testing purposes, set `NODE_ENV` to `test` without quotes, in a `.env` file.
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jesuodz/metric-imperial-converter/blob/master/LICENSE.md) file for details
 
 ## Author
-Jesus Ordosgoitty [jesuodz](https://jesuodz.github.io)
+Jesus Ordosgoitty — [jesuodz](https://jesuodz.github.io)
 
 ## Acknowledgments
 Huge thanks to:
