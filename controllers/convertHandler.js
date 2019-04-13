@@ -15,7 +15,9 @@ const units = {
   'mi': ['miles', 'km', (v) => { return v * 1.609; }],
   'km': ['kilometers', 'mi', (v) => { return v / 1.609; }],
   'lbs': ['pounds', 'kg', (v) => { return v / 2.2045; }],
-  'kg': ['kilograms', 'lbs', (v) => { return v * 2.2045; }]
+  'kg': ['kilograms', 'lbs', (v) => { return v * 2.2045; }],
+  'cm': ['centimeters', 'in', (v) => { return v * 0.3937; }],
+  'in': ['inches', 'cm', (v) => { return v / 0.3937; }]
 };
 
 module.exports = function convertHandler() {

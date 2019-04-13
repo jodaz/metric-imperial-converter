@@ -139,6 +139,20 @@ suite('Unit Tests', () => {
       done();
     });
 
+    test('In to Cm', (done) => {
+      let input = [5.51, 'in'];
+      let expected = 14;
+      assert.approximately(convertHandler.convert(input[0], input[1]), expected, 0.1);
+      done();
+    });
+
+    test('Cms to Ins', (done) => {
+      let input = [18, 'cm'];
+      let expected = 7.0866;
+      assert.approximately(convertHandler.convert(input[0], input[1]), expected, 0.1);
+      done();
+    })
+
   });
 
 });
